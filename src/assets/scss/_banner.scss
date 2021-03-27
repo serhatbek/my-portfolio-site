@@ -3,6 +3,7 @@
   left: 16rem;
   height: 100vh;
   right: 0;
+  overflow: hidden;
   @include flex(row, space-between, center, initial);
 
   @include media(atLarge) {

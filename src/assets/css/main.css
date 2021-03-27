@@ -62,6 +62,40 @@ select {
   padding: 0 2rem;
 }
 
+.fadeInLeft {
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .header {
   width: 14rem;
   position: fixed;
@@ -76,6 +110,8 @@ select {
   align-items: center;
   flex-wrap: initial;
   transition: 0.1s ease-in-out;
+  z-index: 88;
+  overflow: hidden;
 }
 
 .header.openNav {
@@ -117,7 +153,7 @@ select {
 .header__logo > span {
   font-size: 1.4rem;
   margin-top: 0.6rem;
-  color: #5a5a5a;
+  color: #6e6e6e;
 }
 
 .header__logo a {
@@ -147,7 +183,7 @@ select {
   text-align: center;
   border-bottom: 2px solid #1d1d1d;
   letter-spacing: 0.5rem;
-  color: #5a5a5a;
+  color: #6e6e6e;
   font-weight: bold;
   transition: 0.3s ease-in-out;
 }
@@ -167,7 +203,7 @@ select {
 
 .header__social-list__link {
   font-size: 4rem;
-  color: #5a5a5a;
+  color: #6e6e6e;
 }
 
 .header__social-list__link i {
@@ -175,8 +211,8 @@ select {
 }
 
 .header__social-list__link i:hover {
-  color: #20639b;
-  box-shadow: 0px 5px 6px 5px rgba(0, 0, 0, 0.8);
+  color: #d15770;
+  box-shadow: 0px 6px 8px 3px rgba(0, 0, 0, 0.8);
 }
 
 .burger-menu {
@@ -229,6 +265,7 @@ select {
   left: 16rem;
   height: 100vh;
   right: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -279,7 +316,7 @@ select {
 }
 
 .banner__content p {
-  color: #5a5a5a;
+  color: #6e6e6e;
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: 0.2rem;
