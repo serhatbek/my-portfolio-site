@@ -66,6 +66,32 @@ select {
   border: none;
 }
 
+.section {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.section__child {
+  position: absolute;
+  left: 16rem;
+  height: 100vh;
+  right: 0;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+@media (max-width: 767px) {
+  .section__child {
+    left: 0;
+  }
+}
+
 .fadeInLeft {
   animation-name: fadeInLeft;
   animation-duration: 1s;
@@ -101,7 +127,7 @@ select {
 }
 
 .header {
-  width: 14rem;
+  width: 16rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -128,7 +154,7 @@ select {
 
 @media (max-width: 767px) {
   .header {
-    left: -14rem;
+    left: -16rem;
     opacity: 0;
     transition: 0.1s ease-in-out;
   }
@@ -136,7 +162,7 @@ select {
 
 .header__logo {
   width: 100%;
-  max-width: 14rem;
+  max-width: 16rem;
   background-color: #000000;
   padding: 1rem 0;
   text-align: center;
@@ -242,7 +268,7 @@ select {
 }
 
 .header__social-list__link i:hover {
-  color: #d15770;
+  color: #20639b;
   box-shadow: 0px 6px 8px 3px rgba(0, 0, 0, 0.8);
 }
 
@@ -291,12 +317,7 @@ select {
   transform-origin: left;
 }
 
-.banner {
-  position: absolute;
-  left: 16rem;
-  height: 100vh;
-  right: 0;
-  overflow: hidden;
+#banner .banner {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -305,7 +326,7 @@ select {
 }
 
 @media (max-width: 1199px) {
-  .banner {
+  #banner .banner {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -315,38 +336,38 @@ select {
 }
 
 @media (max-width: 767px) {
-  .banner {
+  #banner .banner {
     left: 0;
   }
 }
 
-.banner__content {
+#banner .banner__content {
   padding: 1.6rem;
 }
 
-.banner__content__title {
+#banner .banner__content__title {
   font-size: 6rem;
   font-family: 'Train One', cursive;
   margin-bottom: 3rem;
 }
 
-.banner__content__title span {
+#banner .banner__content__title span {
   display: block;
 }
 
 @media (max-width: 767px) {
-  .banner__content__title {
+  #banner .banner__content__title {
     font-size: 4rem;
   }
 }
 
 @media (max-width: 479px) {
-  .banner__content__title {
+  #banner .banner__content__title {
     font-size: 3rem;
   }
 }
 
-.banner__content p {
+#banner .banner__content p {
   color: #6e6e6e;
   font-size: 2rem;
   font-weight: bold;
@@ -354,25 +375,83 @@ select {
 }
 
 @media (max-width: 479px) {
-  .banner__content p {
+  #banner .banner__content p {
     font-size: 1.6rem;
     font-weight: lighter;
   }
 }
 
-.banner__img {
+#banner .banner__img {
   width: 100%;
   max-width: 100rem;
   min-width: 30rem;
 }
 
 @media (max-width: 1199px) {
-  .banner__img {
+  #banner .banner__img {
     max-width: 60rem;
     margin-bottom: 6rem;
   }
 }
 
-.banner__img img {
+.about {
+  background: linear-gradient(171deg, black 40%, #6e6e6e 100%);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: initial;
+}
+
+@media (max-width: 1199px) {
+  .about {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.about__content {
   width: 100%;
+  max-width: 50rem;
+  padding: 0 1rem;
+}
+
+.about__content__title {
+  font-size: 5rem;
+  margin: 3rem 0;
+}
+
+@media (max-width: 479px) {
+  .about__content__title {
+    font-size: 3rem;
+  }
+}
+
+.about__content__description {
+  font-size: 1.8rem;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 479px) {
+  .about__content__description {
+    font-size: 1.6rem;
+  }
+}
+
+.about__img {
+  width: 100%;
+  max-width: 80rem;
+  min-width: 30rem;
+  padding: 0 3rem 0 0;
+}
+
+@media (max-width: 1199px) {
+  .about__img {
+    max-width: 60rem;
+    margin-bottom: 6rem;
+  }
 }

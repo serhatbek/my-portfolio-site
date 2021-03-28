@@ -29,8 +29,14 @@
       </div>
       <p class="header__main-nav__item player__container">
         <audio id="player" src="./src/assets/audio/bg-music.mp3" preload=”metadata” value=".5" autoplay loop></audio>
-        <button title="Play Music" class="btn btn__music btn__music--play"><i class="fas fa-play-circle"></i></button>
-        <button title="Stop Music" class="btn btn__music btn__music--pause"><i class="fas fa-stop-circle"></i></button>
+        <button title="Play Music" class="btn btn__music btn__music--play"
+          aria-label="Press the button to play the music">
+          <i class="fas fa-play-circle"></i>
+        </button>
+        <button title="Stop Music" class="btn btn__music btn__music--pause"
+          aria-label="Press the button to stop the music">
+          <i class="fas fa-stop-circle"></i>
+        </button>
       </p>
       <a href="#about" class="header__main-nav__item">About</a>
       <a href="#projects" class="header__main-nav__item">Projects</a>
@@ -61,17 +67,41 @@
   </div>
 
   <main role="main">
-    <section class="banner" role="banner">
-      <div class="banner__content">
-        <h2 class="banner__content__title">
-          <span>Hi,</span>
-          <span>I'm Serhat,</span>
-          <span>FrontEnd Developer</span>
-        </h2>
-        <p>Always motivated and continuously learning new things.</p>
+    <section id="banner" title="Banner" role="banner" class="section"
+      aria-label="Welcome to Serhat Bek, Frontend Web Developer">
+      <div class="banner section__child">
+        <div class="banner__content">
+          <h2 class="banner__content__title">
+            <span>Hi,</span>
+            <span>I'm Serhat,</span>
+            <span>FrontEnd Developer</span>
+          </h2>
+          <p>Always motivated and continuously learning new things.</p>
+        </div>
+        <div class="banner__img">
+          <img src="./src/assets/images/banner.svg" alt="Guy looking at his computer screen.">
+        </div>
       </div>
-      <div class="banner__img">
-        <img src="./src/assets/images/banner.svg" alt="">
+    </section>
+
+    <section id="about" title="About" class="section" aria-label="About Me">
+      <div class="about section__child">
+        <div class="about__content">
+          <h2 class="about__content__title">About</h2>
+          <p class="about__content__description">I'm a Junior Front-End Developer located in Kadıköy / İstanbul.</p>
+          <p class="about__content__description">I appreciate team work and perform much better in such settings. I love
+            challenges and treat them as
+            opportunities that better myself.</p>
+          <p class="about__content__description">Well-organized person, problem solver with high attention to detail.
+          </p>
+          <p class="about__content__description">I enjoy creating responsive layouts and want to progress constantly my
+            Front-End skills</p>
+        </div>
+
+        <div class="about__img">
+          <img src="./src/assets/images/about.svg" alt="Forest under moonlight">
+        </div>
+
       </div>
     </section>
   </main>

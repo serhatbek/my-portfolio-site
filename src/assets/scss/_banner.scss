@@ -1,65 +1,58 @@
-.banner {
-  position: absolute;
-  left: 16rem;
-  height: 100vh;
-  right: 0;
-  overflow: hidden;
-  @include flex(row, space-between, center, initial);
-
-  @include media(atLarge) {
-    @include flex(column-reverse, center, center, wrap);
-  }
-
-  @include media(atSmall) {
-    left: 0;
-  }
-
-  &__content {
-    padding: 1.6rem;
-
-    &__title {
-      font-size: 6rem;
-      font-family: 'Train One', cursive;
-      margin-bottom: 3rem;
-
-      span {
-        display: block;
-      }
-
-      @include media(atSmall) {
-        font-size: 4rem;
-      }
-
-      @include media(atXSmall) {
-        font-size: 3rem;
-      }
-    }
-
-    p {
-      color: $font-grey;
-      font-size: 2rem;
-      font-weight: bold;
-      letter-spacing: 0.2rem;
-
-      @include media(atXSmall) {
-        font-size: 1.6rem;
-        font-weight: lighter;
-      }
-    }
-  }
-
-  &__img {
-    width: 100%;
-    max-width: 100rem;
-    min-width: 30rem;
+#banner {
+  .banner {
+    @include flex(row, space-between, center, initial);
 
     @include media(atLarge) {
-      max-width: 60rem;
-      margin-bottom: 6rem;
+      @include flex(column-reverse, center, center, wrap);
     }
 
-    img {
+    @include media(atSmall) {
+      left: 0;
+    }
+
+    &__content {
+      padding: 1.6rem;
+
+      &__title {
+        font-size: 6rem;
+        font-family: 'Train One', cursive;
+        margin-bottom: 3rem;
+
+        span {
+          display: block;
+        }
+
+        @include media(atSmall) {
+          font-size: 4rem;
+        }
+
+        @include media(atXSmall) {
+          font-size: 3rem;
+        }
+      }
+
+      p {
+        color: $font-grey;
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+
+        @include media(atXSmall) {
+          font-size: 1.6rem;
+          font-weight: lighter;
+        }
+      }
+    }
+
+    &__img {
       width: 100%;
+      max-width: 100rem;
+      min-width: 30rem;
+
+      @include media(atLarge) {
+        max-width: 60rem;
+        margin-bottom: 6rem;
+      }
     }
   }
 }
