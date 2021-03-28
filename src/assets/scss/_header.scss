@@ -73,6 +73,29 @@
         color: $font-white;
         background-color: $bg-dark;
       }
+
+      & .btn__music {
+        font-size: 3rem;
+        background-color: transparent;
+        padding: 0 1rem;
+
+        &:hover i {
+          box-shadow: 0 0 6px 6px $turquoise;
+          border-radius: 50%;
+        }
+      }
+
+      & .btn__music--play {
+        color: $green;
+      }
+
+      & .btn__music--pause {
+        color: $pink;
+      }
+    }
+
+    .player__container {
+      @include flex(row, center, center, initial);
     }
   }
 

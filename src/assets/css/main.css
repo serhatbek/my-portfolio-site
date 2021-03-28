@@ -62,6 +62,10 @@ select {
   padding: 0 2rem;
 }
 
+.btn {
+  border: none;
+}
+
 .fadeInLeft {
   animation-name: fadeInLeft;
   animation-duration: 1s;
@@ -191,6 +195,33 @@ select {
 .header__main-nav__item:hover {
   color: #ececea;
   background-color: #000000;
+}
+
+.header__main-nav__item .btn__music {
+  font-size: 3rem;
+  background-color: transparent;
+  padding: 0 1rem;
+}
+
+.header__main-nav__item .btn__music:hover i {
+  box-shadow: 0 0 6px 6px #20639b;
+  border-radius: 50%;
+}
+
+.header__main-nav__item .btn__music--play {
+  color: #34a95c;
+}
+
+.header__main-nav__item .btn__music--pause {
+  color: #d15770;
+}
+
+.header__main-nav .player__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: initial;
 }
 
 .header__social-list {

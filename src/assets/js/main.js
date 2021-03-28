@@ -9,8 +9,7 @@ function toggleNavBar() {
   toggleBurgerBtn.classList.toggle('close');
 }
 
-// Animations
-
+// BANNER ANIMATIONS
 const bannerLeftContent = document.querySelector('.banner__content');
 const bannerRightContent = document.querySelector('.banner__img');
 
@@ -22,5 +21,20 @@ window.onload = function () {
     bannerRightContent.classList.add('fadeInRight');
     bannerLeftContent.style.opacity = 1;
     bannerRightContent.style.opacity = 1;
-  }, 1000);
+  }, 1100);
 };
+
+// MUSIC PLAYER
+const player = document.querySelector('#player');
+const playBtn = document.querySelector('.btn__music--play');
+const pauseBtn = document.querySelector('.btn__music--pause');
+
+player.volume = 0.2;
+
+playBtn.addEventListener('click', () => {
+  player.play();
+});
+
+pauseBtn.addEventListener('click', () => {
+  player.pause();
+});
