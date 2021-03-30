@@ -1,0 +1,58 @@
+.section {
+  overflow: visible;
+
+  &__child {
+    overflow: visible;
+  }
+
+  .projects {
+    text-align: center;
+
+    &__content {
+      @include flex(row, space-around, center, wrap);
+
+      &__card {
+        width: 100%;
+        max-width: 30rem;
+        padding: 4rem 2rem;
+        text-align: center;
+        background-color: $bg-secondary;
+        border-radius: 2rem;
+        box-shadow: 0 2px 8px 4px rgba($bg-dark, 0.6);
+        transition: 0.3s ease-in-out;
+        margin-bottom: 4rem;
+
+        &:hover {
+          box-shadow: 0 4px 14px 8px rgba($bg-dark, 0.6);
+        }
+
+        &-img {
+          width: 100%;
+        }
+
+        &__title {
+          margin: 1.6rem 0;
+        }
+
+        &__link {
+          display: inline-block;
+          font-size: 3rem;
+          border: 2px solid $green;
+          border-radius: 2rem;
+          transition: 0.3s ease-in-out;
+          padding: 0.4rem 3rem;
+          box-sizing: border-box;
+
+          &:first-of-type {
+            margin: 1rem;
+          }
+
+          &:hover {
+            background-color: $turquoise;
+            border: 2px solid $turquoise;
+          }
+        }
+      }
+    }
+  }
+}

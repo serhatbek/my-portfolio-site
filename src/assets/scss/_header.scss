@@ -122,7 +122,7 @@
   }
 }
 .burger-menu {
-  position: absolute;
+  position: fixed;
   width: 4rem;
   height: 3rem;
   @include flex(column, space-between, center, initial);
