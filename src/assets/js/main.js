@@ -53,7 +53,6 @@ const aboutLeftContent = document.querySelector('.about__content');
 const aboutRightContent = document.querySelector('.about__img');
 
 window.addEventListener('scroll', () => {
-  const projectCards = document.querySelectorAll('.projects__content__card');
   aboutLeftContent.style.opacity = 0;
   aboutRightContent.style.opacity = 0;
 
@@ -69,16 +68,21 @@ window.addEventListener('scroll', () => {
     aboutRightContent.classList.remove('rotateInDownLeft');
   }
   // PROJECTS ANIMATIONS - fadeInUp
-  projectCards.forEach((projectCard) => {
-    projectCard.style.opacity = 0;
+});
 
-    if (window.scrollY > 950) {
+// PROJECTS ANIMATIONS - zoomIn
+window.addEventListener('scroll', () => {
+  const projectCards = document.querySelectorAll('.projects__content__card');
+
+  projectCards.forEach((projectCard) => {
+    if (window.scrollY > 1200) {
       setTimeout(() => {
-        projectCard.classList.add('fadeInUp');
+        projectCard.classList.add('zoomIn');
         projectCard.style.opacity = 1;
-      }, 1000);
-    } else if (window.scrollY < 950) {
-      projectCard.classList.remove('fadeInUp');
+      }, 1300);
+    } else if (window.scrollY < 1200) {
+      projectCard.classList.remove('zoomIn');
+      projectCard.style.opacity = 0;
     }
   });
 });

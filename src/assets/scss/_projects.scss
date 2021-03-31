@@ -1,10 +1,4 @@
-.section {
-  overflow: visible;
-
-  &__child {
-    overflow: visible;
-  }
-
+#projects {
   .projects {
     text-align: center;
 
@@ -21,6 +15,7 @@
         box-shadow: 0 2px 8px 4px rgba($bg-dark, 0.6);
         transition: 0.3s ease-in-out;
         margin-bottom: 4rem;
+        opacity: 0;
 
         &:hover {
           box-shadow: 0 4px 14px 8px rgba($bg-dark, 0.6);

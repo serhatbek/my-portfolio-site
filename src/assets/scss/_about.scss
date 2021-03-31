@@ -1,9 +1,11 @@
 .about {
+  height: 100vh;
   background: linear-gradient(
     171deg,
     rgba(0, 0, 0, 1) 40%,
     rgba(110, 110, 110, 1) 100%
   );
+
   @include flex(row-reverse, space-around, center, initial);
 
   @include media(atLarge) {
@@ -29,8 +31,9 @@
   &__img {
     width: 100%;
     max-width: 80rem;
-    min-width: 30rem;
-    padding: 0 3rem 0 0;
+    min-width: 27rem;
+    padding: 0;
+    @include flex(row, center, center, initial);
 
     @include media(atLarge) {
       max-width: 60rem;
@@ -42,6 +45,7 @@
 
       img {
         max-width: 95%;
+        margin: 0;
       }
     }
   }

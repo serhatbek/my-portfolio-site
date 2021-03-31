@@ -1,4 +1,7 @@
 #banner {
+  height: 100vh;
+  @include flex(row, space-between, center, initial);
+
   .banner {
     @include flex(row, space-between, center, initial);
 

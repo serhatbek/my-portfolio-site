@@ -155,37 +155,32 @@
   }
 }
 
-//************ fadeInUp ****************
-
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
+//************ zoomIn ****************
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-@-webkit-keyframes fadeInUp {
+@-webkit-keyframes zoomIn {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
   }
-  100% {
+  50% {
     opacity: 1;
-    -webkit-transform: none;
-    transform: none;
   }
 }
-@keyframes fadeInUp {
+@keyframes zoomIn {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
   }
-  100% {
+  50% {
     opacity: 1;
-    -webkit-transform: none;
-    transform: none;
   }
 }
