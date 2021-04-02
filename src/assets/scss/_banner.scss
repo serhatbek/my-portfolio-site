@@ -41,10 +41,23 @@
         font-size: 2rem;
         font-weight: bold;
         letter-spacing: 0.2rem;
+        margin-bottom: 6rem;
 
         @include media(atXSmall) {
           font-size: 1.6rem;
           font-weight: lighter;
+        }
+      }
+
+      &__btn {
+        padding: 1.6rem 4rem;
+        border: 1px solid $green;
+        border-radius: 0.4rem;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          box-sizing: border-box;
+          background-color: $green;
         }
       }
     }

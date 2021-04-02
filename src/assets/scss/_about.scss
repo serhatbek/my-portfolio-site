@@ -27,6 +27,12 @@
         font-size: 1.6rem;
       }
     }
+
+    a {
+      font-size: 2rem;
+      color: $pink;
+      text-shadow: 4px 4px 2px rgba(49, 49, 49, 1);
+    }
   }
 
   &__img {
@@ -45,7 +51,6 @@
       margin-bottom: 0;
 
       img {
-        // max-width: 95%;
         margin: 0;
       }
     }

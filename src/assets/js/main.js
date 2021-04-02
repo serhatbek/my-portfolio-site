@@ -86,3 +86,75 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// GO TO TOP OF THE PAGE BUTTON
+
+const goTopBtn = document.querySelector('.go-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    goTopBtn.style.visibility = 'visible';
+    goTopBtn.style.opacity = 1;
+  } else if (window.scrollY < 400) {
+    goTopBtn.style.visibility = 'hidden';
+    goTopBtn.style.opacity = 0;
+  }
+});
+
+// Remove the Outline in an Accessible Way
+
+(function (document, window) {
+  if (!document || !window) {
+    return;
+  }
+
+  var styleText =
+    '::-moz-focus-inner{border:0 !important;}:focus{outline: none !important;';
+  var unfocus_style = document.createElement('STYLE');
+
+  window.unfocus = function () {
+    document.getElementsByTagName('HEAD')[0].appendChild(unfocus_style);
+
+    document.addEventListener('mousedown', function () {
+      unfocus_style.innerHTML = styleText + '}';
+    });
+    document.addEventListener('keydown', function () {
+      unfocus_style.innerHTML = '';
+    });
+  };
+
+  unfocus.style = function (style) {
+    styleText += style;
+  };
+
+  unfocus();
+})(document, window);
+
+// EMAIL FORM VALIDATION
+
+let defaultConfig = {
+  // class of the parent element where the error/success class is added
+  classTo: 'form-group',
+  errorClass: 'has-danger',
+  successClass: 'has-success',
+  // class of the parent element where error text element is appended
+  errorTextParent: 'form-group',
+  // type of element to create for the error text
+  errorTextTag: 'div',
+  // class of the error text element
+  errorTextClass: 'text-help',
+};
+
+window.onload = function () {
+  var form = document.getElementById('contact__form');
+
+  // create the pristine instance
+  var pristine = new Pristine(form);
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // check if the form is valid
+    var valid = pristine.validate(); // returns true or false
+  });
+};

@@ -1,0 +1,5 @@
+.love__container {
+  height: 100vh;
+  @include flex(row, center, center, wrap);
+  padding: 0 2rem;
+}

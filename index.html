@@ -67,16 +67,17 @@
   </div>
 
   <main role="main">
-    <section id="banner" title="Banner" role="banner" class="section"
-      aria-label="Welcome to Serhat Bek, Frontend Web Developer">
+    <section id="banner" role="banner" class="section" aria-label="Welcome to Serhat Bek, Frontend Web Developer">
       <div class="banner section__child">
         <div class="banner__content">
           <h2 class="banner__content__title">
             <span>Hi,</span>
             <span>I'm Serhat,</span>
-            <span>FrontEnd Developer</span>
+            <span>Junior FrontEnd Developer</span>
           </h2>
           <p>Always motivated and continuously learning new things.</p>
+
+          <a href="#contact" class="banner__content__btn">Contact Me</a>
         </div>
         <div class="banner__img">
           <img src="./src/assets/images/banner.svg" alt="Guy looking at his computer screen.">
@@ -84,7 +85,7 @@
       </div>
     </section>
 
-    <section id="about" title="About" class="section" aria-label="About Me">
+    <section id="about" class="section" aria-label="About Me">
       <div class="about section__child">
         <div class="about__content">
           <h3 class="about__content__title section__title">About</h3>
@@ -96,6 +97,8 @@
           </p>
           <p class="about__content__description">I enjoy creating responsive layouts and want to progress constantly my
             Front-End Development skills</p>
+
+          <a href="#contact">Let's make this coincidence special.</a>
         </div>
 
         <div class="about__img">
@@ -105,7 +108,7 @@
       </div>
     </section>
 
-    <section id="projects" title="Projects" class="section" aria-label="Projects">
+    <section id="projects" class="section" aria-label="Projects">
       <div class="projects section__child">
         <h3 class="projects__title section__title">Projects</h3>
         <div class="container">
@@ -157,6 +160,17 @@
 
             <div class="projects__content__card">
               <div class="projects__content__card-img">
+                <img src="./src/assets/images/sonic-fun-site.png" alt="Sonic Fan Web">
+              </div>
+              <h4 class="projects__content__card__title">Sonic Fan Website</h4>
+              <a href="https://serhatbek.github.io/sonic-fan-site./" target="_blank"
+                class="projects__content__card__link" title="Live Preview"><i class="fas fa-rocket"></i></a>
+              <a href="https://github.com/serhatbek/sonic-fan-site." target="_blank"
+                class="projects__content__card__link" title="See the codes on GitHub"><i class="fab fa-github"></i></a>
+            </div>
+
+            <div class="projects__content__card">
+              <div class="projects__content__card-img">
                 <img src="./src/assets/images/tabs.png" alt="JS Tabs">
               </div>
               <h4 class="projects__content__card__title">JS Tabs</h4>
@@ -170,7 +184,7 @@
       </div>
     </section>
 
-    <section id="skills" class="section" title="Skills and Tools" aria-label="Skills and Tools">
+    <section id="skills" class="section" aria-label="Skills and Tools">
       <div class="skills section__child">
         <h3 class="skills__title section__title">Skills & Tools</h3>
         <div class="container">
@@ -211,6 +225,10 @@
               <div class="skills__icon">
                 <img src="./src/assets/images/skill-icons/react-js.svg" alt="React">
               </div>
+
+              <div class="skills__icon">
+                <img src="./src/assets/images/skill-icons/figma.svg" alt="Figma">
+              </div>
             </div>
           </div>
 
@@ -225,6 +243,10 @@
                 <img src="./src/assets/images/skill-icons/notion.png" alt="Notion">
               </div>
 
+              <div class="skills__icon">
+                <img src="./src/assets/images/skill-icons/adobe-photoshop.svg" alt="adobe-photoshop">
+              </div>
+
               <div class="skills__icon github">
                 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" shape-rendering="geometricPrecision"
                   text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
@@ -236,12 +258,64 @@
             </div>
           </div>
         </div>
+    </section>
+
+    <section id="contact" class="section" aria-label="Contact Me">
+      <div class="contact section__child">
+        <h3 class="contact__title section__title">Contact Me</h3>
+        <a href="https://www.linkedin.com/in/serhat-bek-47055888/" class="contact__link skills__icon"
+          target="_blank"><img src="./src/assets/images/linkedin-square-color.svg" alt="Contact Me On LinkedIn"></a>
+        <p>Or</p>
+
+        <div class="container">
+          <form id="contact__form" class="contact__form" action="https://formsubmit.co/https://formsubmit.co/el/lesomi"
+            method="POST" autocomplete="off">
+
+            <input type="hidden" />
+            <input type="hidden" name="_next" value="./src/pages/thankyou.html">
+
+            <div class="form-group">
+              <label for="name" class="form-group__label visuallyhidden">Name</label>
+              <input id="name" class="form-group__item" type="text" name="name" placeholder="Name" required
+                data-pristine-required-message="Please enter your name" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-group__label visuallyhidden">Email</label>
+              <input id="email" class="form-group__item" type="email" name="email" placeholder="Email"
+                class="form-control" required data-pristine-required-message="Please enter your email" />
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-group__label visuallyhidden">Subject</label>
+              <input id="subject" class="form-group__item" type="text" name="subject" placeholder="Subject" required
+                data-pristine-required-message="Please enter a subject" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-group__label visuallyhidden">Message</label>
+              <textarea placeholder="Your Message" class="form-group__item" id="message" name="message" rows="10"
+                cols="33">
+              </textarea>
+            </div>
+
+            <div class="form-group">
+              <input type="submit" value="Send Message" class="btn" />
+            </div>
+          </form>
+        </div>
       </div>
     </section>
+
+    <div class="go-top" title="Go to top of the page.">
+      <a href="#banner">
+        <i class="fas fa-arrow-circle-up"></i>
+      </a>
+    </div>
   </main>
 
   <footer></footer>
-
+  <script src="./src/assets/js/vendors/pristine.min.js" type="text/javascript"></script>
   <script src="./src/assets/js/main.js"></script>
 </body>
 
