@@ -55,6 +55,23 @@ select {
   font-size: inherit;
 }
 
+::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.4rem;
+  background: linear-gradient(transparent, #20639b);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #34a95c);
+}
+
+::-webkit-scrollbar-track {
+  background-color: #232927;
+}
+
 .container {
   width: 100%;
   max-width: 120rem;
@@ -79,7 +96,6 @@ select {
 
 .section__child {
   margin-left: 16rem;
-  padding: 0 2rem;
 }
 
 @media (max-width: 767px) {
@@ -379,6 +395,7 @@ select {
 }
 
 #banner {
+  overflow: hidden;
   height: 100vh;
   display: flex;
   flex-direction: row;
@@ -412,13 +429,13 @@ select {
 }
 
 #banner .banner__content {
-  padding: 1.6rem;
+  padding: 0 2rem;
 }
 
 #banner .banner__content__title {
   font-size: 6rem;
   font-family: 'Train One', cursive;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 #banner .banner__content__title span {
@@ -454,7 +471,7 @@ select {
 #banner .banner__img {
   width: 100%;
   max-width: 100rem;
-  min-width: 30rem;
+  min-width: 26rem;
 }
 
 @media (max-width: 1199px) {
@@ -466,6 +483,7 @@ select {
 
 .about {
   height: 100vh;
+  overflow: hidden;
   background: linear-gradient(171deg, black 40%, #6e6e6e 100%);
   display: flex;
   flex-direction: row-reverse;
@@ -506,7 +524,7 @@ select {
   width: 100%;
   max-width: 80rem;
   min-width: 27rem;
-  padding: 0;
+  padding: 0 1rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -526,7 +544,6 @@ select {
     margin-bottom: 0;
   }
   .about__img img {
-    max-width: 95%;
     margin: 0;
   }
 }
@@ -593,15 +610,22 @@ select {
 
 #skills {
   height: 100vh;
-  background: linear-gradient(171deg, rgba(0, 0, 0, 0.5) 40%, rgba(46, 46, 46, 0.901) 100%);
+  background: linear-gradient(180deg, #131a18 60%, #313332 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: initial;
 }
 
 #skills .skills {
+  width: 100%;
   text-align: center;
 }
 
 #skills .skills__current {
   height: 100%;
+  margin-bottom: 6rem;
 }
 
 #skills .skills__current h4 {
@@ -630,10 +654,6 @@ select {
   }
 }
 
-#skills .skills__icon:last-child {
-  width: 8rem;
-}
-
 #skills .skills__icon:last-child svg {
   width: 4rem;
   fill: #20639b;
@@ -641,4 +661,10 @@ select {
 
 #skills .skills__icon p {
   font-size: 0.9rem;
+}
+
+#skills .skills .github svg {
+  width: 4rem;
+  height: 4rem;
+  fill: #ececea;
 }

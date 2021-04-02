@@ -1,5 +1,6 @@
 .about {
   height: 100vh;
+  overflow: hidden;
   background: linear-gradient(
     171deg,
     rgba(0, 0, 0, 1) 40%,
@@ -32,7 +33,7 @@
     width: 100%;
     max-width: 80rem;
     min-width: 27rem;
-    padding: 0;
+    padding: 0 1rem;
     @include flex(row, center, center, initial);
 
     @include media(atLarge) {
@@ -44,7 +45,7 @@
       margin-bottom: 0;
 
       img {
-        max-width: 95%;
+        // max-width: 95%;
         margin: 0;
       }
     }

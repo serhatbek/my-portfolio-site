@@ -1,4 +1,5 @@
 #banner {
+  overflow: hidden;
   height: 100vh;
   @include flex(row, space-between, center, initial);
 
@@ -14,12 +15,13 @@
     }
 
     &__content {
-      padding: 1.6rem;
+      padding: 0 2rem;
+      // margin-left: 4rem;
 
       &__title {
         font-size: 6rem;
         font-family: 'Train One', cursive;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
 
         span {
           display: block;
@@ -50,7 +52,7 @@
     &__img {
       width: 100%;
       max-width: 100rem;
-      min-width: 30rem;
+      min-width: 26rem;
 
       @include media(atLarge) {
         max-width: 60rem;

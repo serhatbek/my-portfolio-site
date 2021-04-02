@@ -1,16 +1,19 @@
 #skills {
   height: 100vh;
   background: linear-gradient(
-    171deg,
-    rgba(0, 0, 0, 0.5) 40%,
-    rgba(46, 46, 46, 0.901) 100%
+    180deg,
+    rgba(19, 26, 24, 1) 60%,
+    rgba(49, 51, 50, 1) 100%
   );
+  @include flex(row, center, center, initial);
 
   .skills {
+    width: 100%;
     text-align: center;
 
     &__current {
       height: 100%;
+      margin-bottom: 6rem;
 
       h4 {
         font-size: 2rem;
@@ -32,10 +35,6 @@
         margin-right: 2rem;
       }
 
-      &:last-child {
-        width: 8rem;
-      }
-
       &:last-child svg {
         width: 4rem;
         fill: $turquoise;
@@ -44,6 +43,12 @@
       p {
         font-size: 0.9rem;
       }
+    }
+
+    .github svg {
+      width: 4rem;
+      height: 4rem;
+      fill: $font-white;
     }
   }
 }
