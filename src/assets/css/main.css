@@ -787,6 +787,7 @@ select {
 }
 
 #contact .contact .form-group .btn {
+  width: 100%;
   color: #ececea;
   font-weight: bold;
   background: transparent;

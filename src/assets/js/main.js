@@ -146,7 +146,7 @@ let defaultConfig = {
 };
 
 window.onload = function () {
-  var form = document.getElementById('contact__form');
+  var form = document.getElementById('form1');
 
   // create the pristine instance
   var pristine = new Pristine(form);
