@@ -729,11 +729,10 @@ select {
 
 #contact {
   text-align: center;
-  padding: 1rem;
+  padding: 0 1rem 4rem 1rem;
 }
 
 #contact .contact {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -743,9 +742,27 @@ select {
 }
 
 #contact .contact__link {
-  display: block;
+  display: inline-block;
   width: 4rem;
   margin-bottom: 2rem;
+}
+
+#contact .contact__email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: initial;
+  width: 20rem;
+}
+
+#contact .contact__email p {
+  font-size: 1.4rem;
+}
+
+#contact .contact__email img {
+  width: 4rem;
+  margin-bottom: 1rem;
 }
 
 #contact .contact p {
@@ -800,6 +817,16 @@ select {
 #contact .contact .form-group .btn:hover {
   box-sizing: border-box;
   background-color: #20639b;
+}
+
+#contact .contact .github {
+  display: inline-block;
+  fill: #ececea;
+}
+
+#contact .contact .github svg {
+  width: 4rem;
+  height: 4rem;
 }
 
 .love__container {

@@ -1,16 +1,29 @@
 #contact {
   text-align: center;
-  padding: 1rem;
+  padding: 0 1rem 4rem 1rem;
 
   .contact {
-    height: 100vh;
     @include flex(column, center, center, initial);
     margin-left: 0;
 
     &__link {
-      display: block;
+      display: inline-block;
       width: 4rem;
       margin-bottom: 2rem;
+    }
+
+    &__email {
+      @include flex(column, center, center, initial);
+      width: 20rem;
+
+      p {
+        font-size: 1.4rem;
+      }
+
+      img {
+        width: 4rem;
+        margin-bottom: 1rem;
+      }
     }
 
     p {
@@ -60,6 +73,16 @@
           box-sizing: border-box;
           background-color: $turquoise;
         }
+      }
+    }
+
+    .github {
+      display: inline-block;
+      fill: $font-white;
+
+      svg {
+        width: 4rem;
+        height: 4rem;
       }
     }
   }
